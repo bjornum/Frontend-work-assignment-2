@@ -1,13 +1,11 @@
 // Open the Modal
-let saturnImage = document.querySelector("img");
-saturnImage.onclick = function () {
+const openSubscriptionModal = () => {
   let modal = document.getElementById("myModal");
   modal.style.display = "block";
 };
 
 // Close the Modal by clicking button
-let closeBtn = document.getElementsByClassName("close")[0];
-closeBtn.onclick = function () {
+const closeSubscriptionModal = () => {
   let modal = document.getElementById("myModal");
   modal.style.display = "none";
 };
