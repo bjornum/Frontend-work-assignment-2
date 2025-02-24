@@ -113,9 +113,9 @@ figcaption {
   border-left: 5px solid #ffcc00;
   border-radius: 5px;
   text-align: center;
-  max-width: 600px;
-  margin: 20px auto;
-  padding: 10px;
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 20px;
   background-color: #f4f4f4;
 }
 
@@ -163,7 +163,7 @@ figcaption {
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
   max-width: 700px;
-  margin: 30px auto;
+  margin: 50px auto;
   border-left: 5px solid #d4af37;
 }
 
@@ -195,6 +195,33 @@ figcaption {
 .saturn-moons-section li:hover {
   background: rgba(255, 255, 255, 0.3);
   cursor: pointer;
+}
+
+/* ===== Atmosphere of Saturn Section ===== */
+
+/* Container of this section */
+.saturn-atmosphere-section {
+  background: linear-gradient(to bottom, #f7f1e3, #d1ccc0);
+  color: #222;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  max-width: 700px;
+  margin: 50px auto;
+  border-left: 5px solid #f5c542;
+}
+
+/* Headliner of the section */
+.saturn-atmosphere-section h2 {
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+/* Text */
+.saturn-atmosphere-section p {
+  line-height: 1.5;
 }
 
 /* ===== FOOTER ===== */
