@@ -6,6 +6,17 @@
   margin: 0px;
 }
 
+p {
+  font-size: 20px;
+}
+
+/* ===== Re-Usable Styling ===== */
+
+/* Adding a Pointer Cursor to the element */
+.pointer {
+  cursor: pointer;
+}
+
 /* ===== Navbar Styling ===== */
 
 /* Header container */
@@ -72,11 +83,6 @@
   height: auto;
 }
 
-/* Display a mouse pointer when hovering the image */
-.pointer {
-  cursor: pointer;
-}
-
 /* Removed Default outline on focus */
 figure:focus {
   outline: none;
@@ -115,7 +121,6 @@ figcaption {
 
 /* Making the text stand out abit */
 .saturn-fact-text {
-  font-size: 20px;
   font-weight: bold;
   color: #4a90e2;
 }
@@ -135,7 +140,7 @@ figcaption {
   border-left: 5px solid #ffcc00;
 }
 
-/* Headliner to  */
+/* Headliner of the section */
 .saturn-rings-section h2 {
   font-size: 24px;
   text-transform: uppercase;
@@ -144,8 +149,52 @@ figcaption {
 
 /* Text itself, with some spacing, to make it stand out more */
 .saturn-rings-section p {
-  font-size: 20px;
   line-height: 1.5;
+}
+
+/* ===== Moons of Saturn Section ===== */
+
+/* Container of this section */
+.saturn-moons-section {
+  background: linear-gradient(to right, #1b2735, #090a0f);
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  max-width: 700px;
+  margin: 30px auto;
+  border-left: 5px solid #d4af37;
+}
+
+/* Headliner of the section */
+.saturn-moons-section h2 {
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+/* Removed inate ol styling */
+.saturn-moons-section ol {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+/* Made each of the moons stand out, and as a bonus at the end, will be clickable */
+.saturn-moons-section li {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  transition: 0.3s;
+  font-size: 20px;
+}
+
+/* Show that each of these can be clickable */
+.saturn-moons-section li:hover {
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
 }
 
 /* ===== FOOTER ===== */
