@@ -42,7 +42,14 @@
   padding: 20px;
 }
 
-/* Image Styling */
+/* Making figure responsive and image centered */
+figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Image - Now Responsive with a set max width */
 .content img {
   width: 100%;
   max-width: 600px;
