@@ -17,3 +17,21 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 };
+
+/* Open modal with Enter key
+  - Selects the figure tag to listen if user clicks enter on it.
+  - Only accessable if user tab into it using keyboard naviation.
+  - Hitting enter opens the modal
+*/
+document.querySelector("figure").addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    openSubscriptionModal();
+  }
+});
+
+// Close modal with Escape key
+window.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    closeSubscriptionModal();
+  }
+});

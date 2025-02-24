@@ -54,6 +54,18 @@
   cursor: pointer;
 }
 
+/* Removed Default outline on focus */
+figure:focus {
+  outline: none;
+}
+
+/* To show user when focusing the image through tabbing with keyboard  */
+figure:focus-visible img {
+  transform: scale(1.2);
+  transition: transform 0.2s;
+  outline: 2px solid #007bff;
+}
+
 /* ===== FOOTER ===== */
 
 .footer {
