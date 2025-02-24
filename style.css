@@ -66,6 +66,11 @@ figure:focus-visible img {
   outline: 2px solid #007bff;
 }
 
+/* Visual for user to see that it is clickable */
+img:hover {
+  outline: 2px solid #007bff;
+}
+
 /* ===== FOOTER ===== */
 
 .footer {
