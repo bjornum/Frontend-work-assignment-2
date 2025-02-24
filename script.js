@@ -1,17 +1,20 @@
-var saturnImage = document.querySelector("img");
+// Open the Modal
+let saturnImage = document.querySelector("img");
 saturnImage.onclick = function () {
-  var modal = document.getElementById("myModal");
+  let modal = document.getElementById("myModal");
   modal.style.display = "block";
 };
 
-var closeBtn = document.getElementsByClassName("close")[0];
+// Close the Modal by clicking button
+let closeBtn = document.getElementsByClassName("close")[0];
 closeBtn.onclick = function () {
-  var modal = document.getElementById("myModal");
+  let modal = document.getElementById("myModal");
   modal.style.display = "none";
 };
 
+// Close Modal by clicking outside
 window.onclick = function (event) {
-  var modal = document.getElementById("myModal");
+  let modal = document.getElementById("myModal");
   if (event.target == modal) {
     modal.style.display = "none";
   }
