@@ -1,5 +1,5 @@
 var saturnImage = document.querySelector("img");
-saturnImage.onmouseover = function () {
+saturnImage.onclick = function () {
   var modal = document.getElementById("myModal");
   modal.style.display = "block";
 };
