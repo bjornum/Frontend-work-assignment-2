@@ -48,6 +48,7 @@
 /* Main Content Container */
 .content {
   padding: 20px;
+  background-color: #0a192f;
 }
 
 /* ===== Image Section ===== */
@@ -57,6 +58,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.image-section h2 {
+  color: rgba(253, 247, 247, 0.945);
+  margin-bottom: 10px;
 }
 
 /* Image - Now Responsive with a set max width */
@@ -88,6 +94,12 @@ img:hover {
   outline: 2px solid #007bff;
 }
 
+/* Made the caption white, so it is better contrast toward the background */
+figcaption {
+  margin-top: 5px;
+  color: rgba(253, 247, 247, 0.945);
+}
+
 /* ===== Saturn Fact Section ===== */
 
 /* Container of this section */
@@ -106,6 +118,34 @@ img:hover {
   font-size: 20px;
   font-weight: bold;
   color: #4a90e2;
+}
+
+/* ===== Rings of Saturn Section ===== */
+
+/* Container of this section */
+.saturn-rings-section {
+  background: linear-gradient(to right, #2c3e50, #34495e);
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  max-width: 700px;
+  margin: 30px auto;
+  border-left: 5px solid #ffcc00;
+}
+
+/* Headliner to  */
+.saturn-rings-section h2 {
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+/* Text itself, with some spacing, to make it stand out more */
+.saturn-rings-section p {
+  font-size: 20px;
+  line-height: 1.5;
 }
 
 /* ===== FOOTER ===== */
