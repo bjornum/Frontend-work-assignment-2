@@ -1,3 +1,11 @@
+/* ===== Global Styling ===== */
+
+/* Remove all default space on page */
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
 /* ===== Navbar Styling ===== */
 
 /* Header container */
