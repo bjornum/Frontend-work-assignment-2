@@ -8,14 +8,17 @@
   </head>
   <body>
     <!-- Header -->
-    <div class="header">
+    <header class="header">
       <h1>Inaccessible Website</h1>
-      <div class="nav">
+      <nav class="nav" aria-label="Main navigation" role="navigation">
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
-      </div>
-    </div>
+      </nav>
+    </header>
+
+    <div tabindex="0">Focusable div</div>
+
     <!-- Main Body -->
     <div class="content" id="home">
       <img
