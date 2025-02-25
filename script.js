@@ -31,16 +31,14 @@
 
 /* ===== Image Modal ===== */
 
-// Open the modal, takes the image and displays it
+// Opens the Modal, sets image if there is one
 const openImageModal = (image) => {
   const modal = document.getElementById("imageModal");
   const modalImage = document.getElementById("modalImage");
-
-  // If passing in an image, set it to source
+  // Check if there is an image, before setting it
   if (image) {
     modalImage.src = image.src;
   }
-  // Show the modal by setting it to Block
   modal.style.display = "block";
 };
 
@@ -66,9 +64,9 @@ window.addEventListener("keydown", (event) => {
   }
 });
 
-// /* ===== Contact Form ===== */
+/* ===== Contact Form ===== */
 
-// // "Sends" the Form and prevents page from reloading
+// "Sends" the Form and prevents page from reloading
 const sendContactForm = (event) => {
   event.preventDefault();
   alert("Message sent successfully");
