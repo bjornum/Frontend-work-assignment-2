@@ -78,8 +78,45 @@
           trace amounts of other elements.
         </p>
       </section>
+
+      <!-- Contact Form -->
+      <section class="contact-form" id="contact">
+        <h2>Contact Us</h2>
+        <p>Have questions about Saturn? Send us a message!</p>
+
+        <form onsubmit="sendContactForm(event);">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="Your Name"
+          />
+
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="Your Email"
+          />
+
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            required
+            placeholder="Your Message"
+          ></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
     </main>
-    <!-- Inaccessible Modal -->
+    <!-- Subscription Modal -->
     <dialog id="myModal" class="modal">
       <div class="modal-content">
         <button class="close" onclick="closeSubscriptionModal()">
@@ -93,6 +130,8 @@
         </form>
       </div>
     </dialog>
+
+    <!-- Image Modal -->
     <!-- Footer -->
     <div class="footer" id="contact">
       <p>© 2024 My Website</p>

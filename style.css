@@ -224,6 +224,76 @@ figcaption {
   line-height: 1.5;
 }
 
+/* ===== Contact Form Section ===== */
+
+/* Contact Form Container */
+.contact-form {
+  background-color: rgba(255, 255, 255, 0.1); /* Subtle contrast */
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 700px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+/* Header */
+.contact-form h2 {
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+  color: #ffffff;
+}
+
+/* Paragraph */
+.contact-form p {
+  font-size: 18px;
+  color: #ddd;
+}
+
+/* The small text above the input fields */
+.contact-form label {
+  display: block;
+  text-align: left;
+  margin: 10px 0 5px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* Fields where user can type */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #1c1c1e;
+  color: #ffffff;
+}
+
+/* Yellow background to fit the themes */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid #ffcc00;
+}
+
+/* Buttons itself */
+.contact-form button {
+  background-color: #ffcc00;
+  color: #000;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+/* Gives a cool hover effect when hovering the button */
+.contact-form button:hover {
+  background-color: #ffaa00;
+}
+
 /* ===== FOOTER ===== */
 
 .footer {

@@ -1,3 +1,5 @@
+/* ===== Subscription Modal =====*/
+
 // Open the Modal
 const openSubscriptionModal = () => {
   let modal = document.getElementById("myModal");
@@ -35,3 +37,13 @@ window.addEventListener("keydown", (event) => {
     closeSubscriptionModal();
   }
 });
+
+/* ===== Image Modal ===== */
+
+/* ===== Contact Form ===== */
+
+// "Sends" the Form and prevents page from reloading
+const sendContactForm = (event) => {
+  event.preventDefault();
+  alert("Message sent successfully");
+};
