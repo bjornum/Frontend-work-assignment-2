@@ -70,4 +70,9 @@ window.addEventListener("keydown", (event) => {
 const sendContactForm = (event) => {
   event.preventDefault();
   alert("Message sent successfully");
+
+  // Clear input fields
+  document.getElementById("name").value = "";
+  document.getElementById("email").value = "";
+  document.getElementById("message").value = "";
 };
