@@ -89,9 +89,7 @@ figure:focus {
 }
 
 /* To show user when focusing the image through tabbing with keyboard  */
-figure:focus-visible img {
-  transform: scale(1.2);
-  transition: transform 0.2s;
+figure:focus img {
   outline: 2px solid #007bff;
 }
 
@@ -306,28 +304,13 @@ figcaption {
   bottom: 0;
 }
 
-/* ===== MODAL ===== */
+/* ===== Subscription Modal ===== */
 
-.modal {
+/* Will define if a modal is open or not */
+.modal-status {
   display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.4);
-  padding-top: 60px;
 }
-.modal-content {
-  background-color: #fefefe;
-  margin: 5% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-}
+
 .close {
   color: #aaa;
   float: right;
@@ -340,4 +323,42 @@ figcaption {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+/* ===== Image Modal ==== */
+
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: black;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  margin: 10% auto;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.modal img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  z-index: 2;
+  object-fit: object-fit;
+}
+
+.modalContainer {
+  border: none;
+  padding: 0;
+  max-width: 100%;
+  max-height: 100%;
 }
