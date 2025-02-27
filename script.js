@@ -1,18 +1,25 @@
 /* ===== Subscription Modal =====*/
 
+// Open the Subscription Modal
 const openSubscriptionModal = () => {
-  let subscriptionModal = document.getElementById("subscriptionModal");
-  let modalBackground = document.getElementById("modalBackground");
-
+  const subscriptionModal = document.getElementById("subscriptionModal");
+  const modalBackground = document.getElementById("modalBackground");
   subscriptionModal.style.display = "block";
   modalBackground.style.display = "block";
 };
 
+// Close the Subscription Modal
 const closeSubscriptionModal = () => {
-  let subscriptionModal = document.getElementById("subscriptionModal");
-  let modalBackground = document.getElementById("modalBackground");
+  const subscriptionModal = document.getElementById("subscriptionModal");
+  const modalBackground = document.getElementById("modalBackground");
   subscriptionModal.style.display = "none";
   modalBackground.style.display = "none";
+};
+
+// Gives an Subscriptiption confirmation message
+const subscriptionConfirmation = () => {
+  document.getElementById("subscriptionId").value = "";
+  alert("You have now subscribed!");
 };
 
 /* ===== Image Modal ===== */
@@ -21,7 +28,6 @@ const closeSubscriptionModal = () => {
 const openImageModal = (image) => {
   const modal = document.getElementById("imageModal");
   const modalImage = document.getElementById("modalImage");
-  const modalBackground = document.getElementById("modalBackground");
   // Check if there is an image, before setting it
   if (image) {
     modalImage.src = image.src;

@@ -144,10 +144,11 @@
         <p class="general-text subscriptionText">
           Get the latest updates about Saturn and other planets.
         </p>
-        <form class="subscriptionForm">
+        <form class="subscriptionForm" onsubmit="subscriptionConfirmation();">
           <input
             type="email"
             placeholder="Enter your email"
+            id="subscriptionId"
             required
             class="subscriptionInput"
           />

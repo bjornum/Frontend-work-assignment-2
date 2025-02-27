@@ -383,11 +383,11 @@ label {
 /* Subscription Close BUtton */
 .subscriptionCloseButton {
   position: absolute;
-  top: 10px;
+  top: 0px;
   right: 10px;
   background: none;
   border: none;
-  font-size: 20px;
+  font-size: 30px;
   cursor: pointer;
 }
 
