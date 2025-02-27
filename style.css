@@ -106,27 +106,41 @@ li:hover {
 /* ===== Navbar Styling ===== */
 
 /* Header - Flex layout for proper alignment */
-header {
+.headerContainer {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between;
-  padding: 20px;
-  background-color: white;
+  padding: 15px 30px;
+  background-color: rgba(10, 25, 47, 0.85);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-/* Title aligned to the left */
-header h1 {
+/* Header - Title styling */
+.headerTitle {
   margin: 0;
   font-size: 24px;
   color: #333;
+  padding: 10px;
+  flex: 1;
+  margin: 0;
+  font-size: 24px;
+  text-align: center;
+  color: rgba(253, 247, 247, 0.945);
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3); /* Soft glow */
 }
 
-/* Navigation & button container (aligned to the right) */
-.nav-container {
+/* Container wrapped around the nav section */
+.navContainer {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
+  flex: 1;
   gap: 20px;
+  padding: 10px;
 }
 
 /* Navigation - Centers links with even spacing */
@@ -135,15 +149,16 @@ header h1 {
   gap: 25px;
 }
 
-/* Link styling */
+/* Navigation Link styling */
 .nav a {
+  color: rgba(253, 247, 247, 0.945);
   text-decoration: none;
-  color: #333;
   font-weight: bold;
-  font-size: 18px;
   padding: 5px 10px;
-  position: relative;
   transition: color 0.3s ease-in-out;
+  font-size: 18px;
+  position: relative;
+  margin-right: 15px;
 }
 
 /* Smooth underline effect */
@@ -156,11 +171,6 @@ header h1 {
   height: 2px;
   background-color: #007bff;
   transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
-}
-
-.nav a:hover,
-.nav a:focus {
-  color: #007bff;
 }
 
 /* Expands underline on hover */
@@ -176,62 +186,24 @@ header h1 {
   text-shadow: 0px 0px 8px rgba(100, 255, 218, 0.8);
 }
 
-/* Button Styling */
-header button {
-  padding: 8px 16px;
-  font-size: 16px;
-  font-weight: bold;
-  background-color: #007bff;
-  color: white;
+/* Subscribe Button */
+.subscribeButton {
+  padding: 10px 15px;
   border: none;
   border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
-}
-
-header button:hover {
-  background-color: #0056b3;
-}
-
-.navbar {
-  background-color: rgba(10, 25, 47, 0.85);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 30px;
-}
-
-.navbar h1 {
-  font-size: 24px;
-  color: rgba(253, 247, 247, 0.945);
-  text-transform: uppercase;
-  font-weight: bold;
-  letter-spacing: 1px;
-  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3); /* Soft glow */
-}
-
-.nav a {
-  color: rgba(253, 247, 247, 0.945);
-  text-decoration: none;
-  font-weight: bold;
-  padding: 8px 15px;
-  transition: color 0.3s ease-in-out;
-}
-
-.navbar button {
+  margin-right: 30px;
   background: rgba(100, 255, 218, 0.2); /* Transparent teal */
   border: 2px solid #64ffda;
   color: #64ffda;
-  padding: 10px 20px;
   font-size: 16px;
   font-weight: bold;
   text-transform: uppercase;
-  border-radius: 5px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
 
-.navbar button:hover {
+/* Hover effect on the subscription button */
+.subscribeButton:hover {
   background: #64ffda;
   color: #0a192f;
   text-shadow: none;

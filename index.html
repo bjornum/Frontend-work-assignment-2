@@ -8,51 +8,18 @@
   </head>
   <body>
     <!-- Header -->
-    <header
-      class="navbar"
-      style="display: flex; flex-wrap: wrap; align-items: center; padding: 10px"
-    >
-      <h1
-        style="
-          padding: 10px;
-          flex: 1;
-          margin: 0;
-          font-size: 24px;
-          text-align: center;
-        "
-      >
-        Inaccessible Website
-      </h1>
-      <div
-        class="nav-container"
-        style="
-          display: flex;
-          align-items: center;
-          flex: 1;
-          justify-content: flex-end;
-          padding: 10px;
-        "
-      >
+    <header class="navbar headerContainer">
+      <h1 class="headerTitle">Inaccessible Website</h1>
+      <section class="navContainer">
         <nav class="nav" aria-label="Main navigation" role="navigation">
-          <a href="#home" style="margin-right: 15px">Home</a>
-          <a href="#about" style="margin-right: 15px">About</a>
-          <a href="#contact" style="margin-right: 15px">Contact</a>
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
         </nav>
-        <button
-          onclick="openSubscriptionModal()"
-          style="
-            padding: 10px 15px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-right: 30px;
-          "
-        >
+        <button onclick="openSubscriptionModal()" class="subscribeButton">
           Subscribe
         </button>
-      </div>
+      </section>
     </header>
 
     <!-- Main content -->
