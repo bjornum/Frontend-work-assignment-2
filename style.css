@@ -105,32 +105,136 @@ li:hover {
 
 /* ===== Navbar Styling ===== */
 
-/* Navigation - Centers links and spaces them out */
-.nav {
+/* Header - Flex layout for proper alignment */
+header {
   display: flex;
-  justify-content: center;
-  gap: 15px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-/* Link styling - Removes default styles and improves appearance */
+/* Title aligned to the left */
+header h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+}
+
+/* Navigation & button container (aligned to the right) */
+.nav-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Navigation - Centers links with even spacing */
+.nav {
+  display: flex;
+  gap: 25px;
+}
+
+/* Link styling */
 .nav a {
   text-decoration: none;
   color: #333;
   font-weight: bold;
+  font-size: 18px;
   padding: 5px 10px;
+  position: relative;
+  transition: color 0.3s ease-in-out;
 }
 
-/* Highlight when hovering or tabbing */
+/* Smooth underline effect */
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background-color: #007bff;
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
 .nav a:hover,
 .nav a:focus {
   color: #007bff;
-  text-decoration: underline;
 }
 
-/* Outline for focused links - Visible only on keyboard navigation */
+/* Expands underline on hover */
+.nav a:hover::after,
+.nav a:focus::after {
+  width: 100%;
+  left: 0;
+}
+
+.nav a:hover,
 .nav a:focus {
-  outline: 2px solid #007bff;
-  outline-offset: 3px;
+  color: #64ffda;
+  text-shadow: 0px 0px 8px rgba(100, 255, 218, 0.8);
+}
+
+/* Button Styling */
+header button {
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+header button:hover {
+  background-color: #0056b3;
+}
+
+.navbar {
+  background-color: rgba(10, 25, 47, 0.85);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+}
+
+.navbar h1 {
+  font-size: 24px;
+  color: rgba(253, 247, 247, 0.945);
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3); /* Soft glow */
+}
+
+.nav a {
+  color: rgba(253, 247, 247, 0.945);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 15px;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar button {
+  background: rgba(100, 255, 218, 0.2); /* Transparent teal */
+  border: 2px solid #64ffda;
+  color: #64ffda;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar button:hover {
+  background: #64ffda;
+  color: #0a192f;
+  text-shadow: none;
 }
 
 /* ===== Image Section ===== */
