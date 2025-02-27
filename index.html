@@ -16,7 +16,7 @@
           <a href="#about">About</a>
           <a href="#contact">Contact</a>
         </nav>
-        <button>Subscribe</button>
+        <button onclick="openSubscriptionModal()">Subscribe</button>
       </div>
     </header>
 
@@ -122,25 +122,42 @@
       </section>
     </main>
 
+    <!-- Gives a nice background, when Modal is opened -->
+    <div
+      id="modalBackground"
+      class="modalBackground"
+      onclick="closeSubscriptionModal()"
+    ></div>
+
     <!-- Subscription Modal -->
-    <!-- <dialog id="myModal" class="modal">
-      <div class="modal-content">
-        <button class="close" onclick="closeSubscriptionModal()">
+    <dialog id="subscriptionModal" class="subscriptionDialog">
+      <div class="subscriptionContentDialog">
+        <button
+          onclick="closeSubscriptionModal()"
+          class="subscriptionCloseButton"
+        >
           &times;
         </button>
-        <h2>Subscribe to our Newsletter</h2>
-        <p>Get the latest updates about Saturn and other planets.</p>
-        <form>
-          <input type="text" placeholder="Enter your email" />
-          <button type="submit">Subscribe</button>
+        <h2 class="subscriptionHeader">Subscribe to our Newsletter</h2>
+        <p class="general-text subscriptionText">
+          Get the latest updates about Saturn and other planets.
+        </p>
+        <form class="subscriptionForm">
+          <input
+            type="email"
+            placeholder="Enter your email"
+            required
+            class="subscriptionInput"
+          />
+          <button type="submit" class="subscriptionButton">Subscribe</button>
         </form>
       </div>
-    </dialog> -->
+    </dialog>
 
     <!-- Image Modal -->
     <dialog
       id="imageModal"
-      class="modal modal-status modalContainer"
+      class="modal modal-status modalContainer modalBackgroundBlack"
       onclick="closeImageModal()"
     >
       <div class="modal-content">

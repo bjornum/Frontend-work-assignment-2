@@ -1,33 +1,19 @@
 /* ===== Subscription Modal =====*/
 
-// // Open the Modal
-// const openSubscriptionModal = () => {
-//   let modal = document.getElementById("myModal");
-//   modal.style.display = "block";
-// };
+const openSubscriptionModal = () => {
+  let subscriptionModal = document.getElementById("subscriptionModal");
+  let modalBackground = document.getElementById("modalBackground");
 
-// // Close the Modal by clicking button
-// const closeSubscriptionModal = () => {
-//   let modal = document.getElementById("myModal");
-//   modal.style.display = "none";
-// };
+  subscriptionModal.style.display = "block";
+  modalBackground.style.display = "block";
+};
 
-// // Close Modal by clicking outside
-// window.onclick = function (event) {
-//   let modal = document.getElementById("myModal");
-//   let imageModal = document.getElementById("imageModal");
-//   if (event.target == modal) {
-//     modal.style.display = "none";
-//   } else if (event.target == imageModal) {
-//     imageModal.style.display = "none";
-//   }
-// };
-
-/* Open modal with Enter key
-  - Selects the figure tag to listen if user clicks enter on it.
-  - Only accessable if user tab into it using keyboard naviation.
-  - Hitting enter opens the modal
-*/
+const closeSubscriptionModal = () => {
+  let subscriptionModal = document.getElementById("subscriptionModal");
+  let modalBackground = document.getElementById("modalBackground");
+  subscriptionModal.style.display = "none";
+  modalBackground.style.display = "none";
+};
 
 /* ===== Image Modal ===== */
 
@@ -35,6 +21,7 @@
 const openImageModal = (image) => {
   const modal = document.getElementById("imageModal");
   const modalImage = document.getElementById("modalImage");
+  const modalBackground = document.getElementById("modalBackground");
   // Check if there is an image, before setting it
   if (image) {
     modalImage.src = image.src;
@@ -45,6 +32,7 @@ const openImageModal = (image) => {
 // Close the modal by setting display to none
 const closeImageModal = () => {
   const imageModal = document.getElementById("imageModal");
+  const modalBackground = document.getElementById("modalBackground");
   imageModal.style.display = "none";
 };
 
