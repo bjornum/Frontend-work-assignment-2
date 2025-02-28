@@ -70,3 +70,21 @@ const sendContactForm = (event) => {
   document.getElementById("email").value = "";
   document.getElementById("message").value = "";
 };
+
+/* ===== Fact about moons ===== */
+
+const moonFacts = (moon) => {
+  if (moon == "Titan") {
+    alert("Titan – The king of Saturn’s moons, wrapped in a thick orange haze, with lakes of liquid methane! 🌫️🌊");
+  } else if (moon == "Rhea") {
+    alert("Rhea – The second largest moon of Saturn, with a surface of ice and rock! 🌌❄️");
+  } else if (moon == "Iapetus") {
+    alert("Iapetus – The yin-yang moon of Saturn, with a two-toned surface! ☯️🌑");
+  } else if (moon == "Dione") {
+    alert("Dione – The fourth largest moon of Saturn, with a surface of ice and rock! 🌌❄️");
+  } else if (moon == "Enceladus") {
+    alert("Enceladus – The moon of Saturn with a subsurface ocean, and geysers of water vapor! 🌊💨");
+  } else {
+    alert("No facts available for this moon");
+  }
+};
