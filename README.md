@@ -4,6 +4,7 @@ This is a page about Saturn and some amazing facts about it.
 It is fully interactable, with focus on accessability.
 
 ## Lighthouse Score
+![Lighthouse Image](https://github.com/bjornum/Frontend-work-assignment-2/blob/master/lighthouse2.png)
 
 ## Accessibility
 
