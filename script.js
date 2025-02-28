@@ -55,6 +55,7 @@ document.querySelector("figure").addEventListener("keydown", (event) => {
 window.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
     closeImageModal();
+    closeSubscriptionModal();
   }
 });
 
