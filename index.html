@@ -8,17 +8,22 @@
   </head>
   <body>
     <!-- Header -->
-    <header class="header">
-      <h1>Inaccessible Website</h1>
-      <nav class="nav" aria-label="Main navigation" role="navigation">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
+    <header class="navbar headerContainer">
+      <h1 class="headerTitle">Inaccessible Website</h1>
+      <section class="navContainer">
+        <nav class="nav" aria-label="Main navigation" role="navigation">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <button onclick="openSubscriptionModal()" class="subscribeButton">
+          Subscribe
+        </button>
+      </section>
     </header>
 
     <!-- Main content -->
-    <main class="content" id="home">
+    <main class="background-main" style="padding: 20px" id="home">
       <!-- Image and Subscription Modal -->
       <section class="image-section">
         <h2>Saturn in Focus</h2>
@@ -26,8 +31,8 @@
           <img
             src="https://plus.unsplash.com/premium_photo-1717460700790-5199c828e0c7?q=80&w=1869&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="Image of Saturn"
-            class="pointer"
-            onclick="openSubscriptionModal()"
+            class="pointer responsive-image"
+            onclick="openImageModal(this)"
           />
           <figcaption>
             This is an image of Saturn, the sixth planet from the Sun.
@@ -36,8 +41,8 @@
       </section>
 
       <!-- Facts about Saturn -->
-      <section class="saturn-fact-section">
-        <p class="saturn-fact-text">
+      <section class="general-section background-warm font-color-dark">
+        <p class="general-text font-weight-bold">
           Saturn, the second-largest planet in our solar system, is famous for
           its stunning rings made of ice and rock. Despite its size, it is a
           lightweight giant, as it is mostly composed of hydrogen and helium!
@@ -45,9 +50,9 @@
       </section>
 
       <!-- Rings of Saturn -->
-      <section class="saturn-rings-section">
-        <h2>Saturn's Rings</h2>
-        <p>
+      <section class="general-section background-smokey font-color-white">
+        <h2 class="general-headers">Saturn's Rings</h2>
+        <p class="general-text">
           Saturn is well known for its prominent ring system, which is composed
           mostly of ice particles with a smaller amount of rocky debris and
           dust.
@@ -55,9 +60,9 @@
       </section>
 
       <!-- Moons of Saturn -->
-      <section class="saturn-moons-section">
-        <h2>Moons of Saturn</h2>
-        <p>
+      <section class="general-section background-moons font-color-white">
+        <h2 class="general-headers">Moons of Saturn</h2>
+        <p class="general-text">
           Saturn has 82 moons. The largest moon, Titan, is larger than the
           planet Mercury.
         </p>
@@ -71,28 +76,98 @@
       </section>
 
       <!-- Saturns Atmosphere -->
-      <section class="saturn-atmosphere-section">
-        <h2>Atmosphere of Saturn</h2>
-        <p>
+      <section class="general-section background-warm font-color-dark">
+        <h2 class="general-headers">Atmosphere of Saturn</h2>
+        <p class="general-text font-weight-bold">
           Saturn's atmosphere is primarily composed of hydrogen and helium, with
           trace amounts of other elements.
         </p>
       </section>
+
+      <!-- Contact Form -->
+      <section class="contact-form font-color-white" id="contact">
+        <h2 class="general-headers">Contact Us</h2>
+        <p class="general-text">
+          Have questions about Saturn? Send us a message!
+        </p>
+
+        <form onsubmit="sendContactForm(event);">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="Your Name"
+          />
+
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="Your Email"
+          />
+
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            required
+            placeholder="Your Message"
+          ></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
     </main>
-    <!-- Inaccessible Modal -->
-    <dialog id="myModal" class="modal">
-      <div class="modal-content">
-        <button class="close" onclick="closeSubscriptionModal()">
+
+    <!-- Gives a nice background, when Modal is opened -->
+    <div
+      id="modalBackground"
+      class="modalBackground"
+      onclick="closeSubscriptionModal()"
+    ></div>
+
+    <!-- Subscription Modal -->
+    <dialog id="subscriptionModal" class="subscriptionDialog">
+      <div class="subscriptionContentDialog">
+        <button
+          onclick="closeSubscriptionModal()"
+          class="subscriptionCloseButton"
+        >
           &times;
         </button>
-        <h2>Subscribe to our Newsletter</h2>
-        <p>Get the latest updates about Saturn and other planets.</p>
-        <form>
-          <input type="text" placeholder="Enter your email" />
-          <button type="submit">Subscribe</button>
+        <h2 class="subscriptionHeader">Subscribe to our Newsletter</h2>
+        <p class="general-text subscriptionText">
+          Get the latest updates about Saturn and other planets.
+        </p>
+        <form class="subscriptionForm" onsubmit="subscriptionConfirmation();">
+          <input
+            type="email"
+            placeholder="Enter your email"
+            id="subscriptionId"
+            required
+            class="subscriptionInput"
+          />
+          <button type="submit" class="subscriptionButton">Subscribe</button>
         </form>
       </div>
     </dialog>
+
+    <!-- Image Modal -->
+    <dialog
+      id="imageModal"
+      class="modal modal-status modalContainer modalBackgroundBlack"
+      onclick="closeImageModal()"
+    >
+      <div class="modal-content">
+        <img id="modalImage" src="" alt="Expanded View" class="pointer" />
+      </div>
+    </dialog>
+
     <!-- Footer -->
     <div class="footer" id="contact">
       <p>© 2024 My Website</p>

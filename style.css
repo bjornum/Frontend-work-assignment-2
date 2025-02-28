@@ -1,4 +1,22 @@
-/* ===== Global Styling ===== */
+/* CSS Quicksearch
+  - Due to the amount of css i wrote, navigating it is a hassle.
+  - Below you can see what to search to find each specific section.
+
+  - #GlobalStyling
+  - #Typography
+  - #Colours
+  - #Utilities
+  - #GeneralSection - As each of the sections was the same
+  - #Navbar - aka Header and everything within
+  - #ImageSection - Section with the clickable image
+  - #ContactFormSection - Section with the contact form
+  - #Footer
+  - #SubscriptionModal
+  - #ImageModal
+
+*/
+
+/* ===== #GlobalStyling ===== */
 
 /* Remove all default space on page */
 * {
@@ -6,63 +24,213 @@
   margin: 0px;
 }
 
-p {
+/* Remove default styling and padding */
+ol {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+/* Custom to moon section */
+li {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  transition: 0.3s;
   font-size: 20px;
 }
 
-/* ===== Re-Usable Styling ===== */
+/* Gives a nice hover effect, show that these are clickable */
+li:hover {
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+}
+
+/* ===== #Typography ===== */
+
+/* Make things bold */
+.font-weight-bold {
+  font-weight: bold;
+}
+
+/* ===== #Colours =====*/
+
+/* Core background for the page */
+.background-main {
+  background-color: #0a192f;
+}
+
+/* Softer white colour, when needing contrast to dark background */
+.font-color-white {
+  color: rgba(253, 247, 247, 0.945);
+}
+
+/* Darker colour, used for lighter backgrounds */
+.font-color-dark {
+  color: rgb(73, 72, 72);
+}
+
+/* Default for header atm - Will be adjusted */
+.background-white {
+  background-color: #f4f4f4;
+}
+
+/* Warm Background colour used for facts of saturn and saturns atmosphere */
+.background-warm {
+  background: linear-gradient(to bottom, #f7f1e3, #d1ccc0);
+}
+
+/* Dark smoke like background - Used for rings of saturn */
+.background-smokey {
+  background: linear-gradient(to right, #2c3e50, #34495e);
+}
+
+/* Used for moons of saturn */
+.background-moons {
+  background: linear-gradient(to right, #1b2735, #090a0f);
+}
+
+/* ===== #Utilities ===== */
 
 /* Adding a Pointer Cursor to the element */
 .pointer {
   cursor: pointer;
 }
 
-/* ===== Navbar Styling ===== */
+/* ===== #GeneralSection ===== */
 
-/* Header container */
-.header {
-  background-color: #f4f4f4;
+/* Standard on all core sections */
+.general-section {
+  max-width: 700px;
+  border-left: 5px solid #ffcc00;
+  border-radius: 10px;
   padding: 20px;
+  margin: 50px auto;
   text-align: center;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
 }
 
-/* Navigation - Centers links and spaces them out */
+/* Standard on all core section headers */
+.general-headers {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+/* Standard on all core sections text */
+.general-text {
+  line-height: 1.5;
+  font-size: 20px;
+}
+
+/* ===== #Navbar ===== */
+
+/* Main Header Container */
+.headerContainer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background-color: rgba(10, 25, 47, 0.85);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Title */
+.headerTitle {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+  padding: 10px;
+  flex: 1;
+  margin: 0;
+  font-size: 24px;
+  text-align: center;
+  color: rgba(253, 247, 247, 0.945);
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Container wrapped around the nav section */
+.navContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1;
+  gap: 20px;
+  padding: 10px;
+}
+
+/* Navigation - Centers links with even spacing */
 .nav {
   display: flex;
-  justify-content: center;
-  gap: 15px;
+  gap: 25px;
 }
 
-/* Link styling - Removes default styles and improves appearance */
+/* Navigation Link styling */
 .nav a {
+  color: rgba(253, 247, 247, 0.945);
   text-decoration: none;
-  color: #333;
   font-weight: bold;
   padding: 5px 10px;
+  transition: color 0.3s ease-in-out;
+  font-size: 18px;
+  position: relative;
+  margin-right: 15px;
 }
 
-/* Highlight when hovering or tabbing */
+/* Smooth underline effect */
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background-color: #007bff;
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+/* Expands underline on hover */
+.nav a:hover::after,
+.nav a:focus::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Gives link a nice colour and effect on hover */
 .nav a:hover,
 .nav a:focus {
-  color: #007bff;
-  text-decoration: underline;
+  color: #64ffda;
+  text-shadow: 0px 0px 8px rgba(100, 255, 218, 0.8);
 }
 
-/* Outline for focused links - Visible only on keyboard navigation */
-.nav a:focus {
-  outline: 2px solid #007bff;
-  outline-offset: 3px;
+/* Subscribe Button */
+.subscribeButton {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 30px;
+  background: rgba(100, 255, 218, 0.2);
+  border: 2px solid #64ffda;
+  color: #64ffda;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
-/* ===== MAIN BODY ===== */
-
-/* Main Content Container */
-.content {
-  padding: 20px;
-  background-color: #0a192f;
+/* Hover effect on the subscription button */
+.subscribeButton:hover {
+  background: #64ffda;
+  color: #0a192f;
+  text-shadow: none;
 }
 
-/* ===== Image Section ===== */
+/* ===== #ImageSection ===== */
 
 /* Centers section displaying the image */
 .image-section {
@@ -71,13 +239,14 @@ p {
   align-items: center;
 }
 
+/* Heading above the image */
 .image-section h2 {
   color: rgba(253, 247, 247, 0.945);
   margin-bottom: 10px;
 }
 
 /* Image - Now Responsive with a set max width */
-.content img {
+.responsive-image {
   width: 100%;
   max-width: 600px;
   height: auto;
@@ -89,9 +258,7 @@ figure:focus {
 }
 
 /* To show user when focusing the image through tabbing with keyboard  */
-figure:focus-visible img {
-  transform: scale(1.2);
-  transition: transform 0.2s;
+figure:focus img {
   outline: 2px solid #007bff;
 }
 
@@ -106,125 +273,64 @@ figcaption {
   color: rgba(253, 247, 247, 0.945);
 }
 
-/* ===== Saturn Fact Section ===== */
+/* ===== #ContactFormSection ===== */
 
-/* Container of this section */
-.saturn-fact-section {
-  border-left: 5px solid #ffcc00;
-  border-radius: 5px;
-  text-align: center;
+/* Contact Form Container */
+.contact-form {
+  background-color: rgba(255, 255, 255, 0.1); /* Subtle contrast */
+  padding: 30px;
+  border-radius: 10px;
   max-width: 700px;
-  margin: 50px auto;
-  padding: 20px;
-  background-color: #f4f4f4;
+  margin: 40px auto;
+  text-align: center;
 }
 
-/* Making the text stand out abit */
-.saturn-fact-text {
+/* The small text above the input fields */
+label {
+  display: block;
+  text-align: left;
+  margin: 10px 0 5px;
   font-weight: bold;
-  color: #4a90e2;
-}
-
-/* ===== Rings of Saturn Section ===== */
-
-/* Container of this section */
-.saturn-rings-section {
-  background: linear-gradient(to right, #2c3e50, #34495e);
   color: #ffffff;
-  text-align: center;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
-  max-width: 700px;
-  margin: 30px auto;
-  border-left: 5px solid #ffcc00;
 }
 
-/* Headliner of the section */
-.saturn-rings-section h2 {
-  font-size: 24px;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
-
-/* Text itself, with some spacing, to make it stand out more */
-.saturn-rings-section p {
-  line-height: 1.5;
-}
-
-/* ===== Moons of Saturn Section ===== */
-
-/* Container of this section */
-.saturn-moons-section {
-  background: linear-gradient(to right, #1b2735, #090a0f);
-  color: #ffffff;
-  text-align: center;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-  max-width: 700px;
-  margin: 50px auto;
-  border-left: 5px solid #d4af37;
-}
-
-/* Headliner of the section */
-.saturn-moons-section h2 {
-  font-size: 24px;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
-
-/* Removed inate ol styling */
-.saturn-moons-section ol {
-  list-style: none;
-  padding: 0;
-  margin-top: 10px;
-}
-
-/* Made each of the moons stand out, and as a bonus at the end, will be clickable */
-.saturn-moons-section li {
-  background: rgba(255, 255, 255, 0.1);
+/* Fields where user can type */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
   padding: 10px;
-  margin: 5px 0;
+  margin-bottom: 15px;
+  border: none;
   border-radius: 5px;
-  transition: 0.3s;
+  font-size: 1rem;
+  background-color: #1c1c1e;
+  color: #ffffff;
+}
+
+/* Yellow background to fit the themes */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid #ffcc00;
+}
+
+/* Buttons itself */
+.contact-form button {
+  background-color: #ffcc00;
+  color: #000;
   font-size: 20px;
-}
-
-/* Show that each of these can be clickable */
-.saturn-moons-section li:hover {
-  background: rgba(255, 255, 255, 0.3);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
+  transition: background 0.3s ease-in-out;
 }
 
-/* ===== Atmosphere of Saturn Section ===== */
-
-/* Container of this section */
-.saturn-atmosphere-section {
-  background: linear-gradient(to bottom, #f7f1e3, #d1ccc0);
-  color: #222;
-  text-align: center;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
-  max-width: 700px;
-  margin: 50px auto;
-  border-left: 5px solid #f5c542;
+/* Gives a cool hover effect when hovering the button */
+.contact-form button:hover {
+  background-color: #ffaa00;
 }
 
-/* Headliner of the section */
-.saturn-atmosphere-section h2 {
-  font-size: 24px;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
-
-/* Text */
-.saturn-atmosphere-section p {
-  line-height: 1.5;
-}
-
-/* ===== FOOTER ===== */
+/* ===== #Footer ===== */
 
 .footer {
   background-color: #333;
@@ -236,28 +342,126 @@ figcaption {
   bottom: 0;
 }
 
-/* ===== MODAL ===== */
+/* ===== #SubscriptionModal ===== */
 
-.modal {
-  display: none;
+/* Displays a transparent background when opening the subscription modal */
+.modalBackground {
+  background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
-  z-index: 1;
-  left: 0;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.4);
-  padding-top: 60px;
+  display: none;
+  z-index: 2;
 }
-.modal-content {
-  background-color: #fefefe;
-  margin: 5% auto;
+
+/* Subscription Dialog Styling */
+.subscriptionDialog {
+  width: 70%;
+  max-width: 600px;
   padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: #f9f9f9;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
 }
+
+.subscriptionContentDialog {
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  position: relative;
+}
+
+/* Subscription Close BUtton */
+.subscriptionCloseButton {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Subscription Header Styling */
+.subscriptionHeader {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+/* Subscription Text */
+.subscriptionText {
+  margin-bottom: 20px;
+}
+
+/* Subscription Form */
+.subscriptionForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Subscription Input */
+.subscriptionInput {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+/* Subscription Button */
+.subscriptionButton {
+  background: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Close Button */
+.close-subscription-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #fff;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+}
+
+.modal-content-subscription {
+  background: #222; /* Deep black background */
+  color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  min-width: 350px;
+  max-width: 400px;
+}
+
+/* ===== #ImageModal ==== */
+
+/* An specific class to have the modal status tracked */
+.modal-status {
+  display: none;
+}
+
+/* Close Button */
 .close {
   color: #aaa;
   float: right;
@@ -265,9 +469,52 @@ figcaption {
   font-weight: bold;
   cursor: pointer;
 }
+
+/* Simple effect on the close button */
 .close:hover,
 .close:focus {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+/* Modal itself */
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+/* To make background black when clicking the image */
+.modalBackgroundBlack {
+  background: black;
+}
+
+.modal-content {
+  margin: 10% auto;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.modal img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  z-index: 2;
+  object-fit: object-fit;
+}
+
+.modalContainer {
+  border: none;
+  padding: 0;
+  max-width: 100%;
+  max-height: 100%;
 }
