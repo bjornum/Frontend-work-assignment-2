@@ -145,7 +145,7 @@ li:hover {
   flex: 1;
   margin: 0;
   font-size: 24px;
-  text-align: center;
+  /* text-align: center; */
   color: rgba(253, 247, 247, 0.945);
   text-transform: uppercase;
   font-weight: bold;
@@ -156,8 +156,9 @@ li:hover {
 /* Container wrapped around the nav section */
 .navContainer {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   flex: 1;
   gap: 20px;
   padding: 10px;
@@ -220,6 +221,7 @@ li:hover {
   text-transform: uppercase;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  order: 2; /* Moves the button to the right when there's enough space */
 }
 
 /* Hover effect on the subscription button */
@@ -227,6 +229,27 @@ li:hover {
   background: #64ffda;
   color: #0a192f;
   text-shadow: none;
+}
+
+.subscribeButtonWrapper {
+  display: flex;
+
+  justify-content: center; /* Center the button horizontally */
+  width: 100%;
+  margin-top: 10px; /* Optional: Adds some space between nav and button */
+}
+
+/* Button moves to a new line when space is tight */
+@media (max-width: 768px) {
+  .navContainer {
+    flex-direction: column; /* Stack the nav and button vertically */
+    align-items: center; /* Center them when stacked */
+  }
+
+  .subscribeButton {
+    margin-top: 10px; /* Optional: Adds space between the nav and button */
+    order: 1; /* Moves the button below the nav */
+  }
 }
 
 /* ===== #ImageSection ===== */
