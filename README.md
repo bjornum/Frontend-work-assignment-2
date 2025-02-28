@@ -3,6 +3,8 @@
 This is a page about Saturn and some amazing facts about it.
 It is fully interactable, with focus on accessability.
 
+## Lighthouse Score
+
 ## Accessibility
 
 ### Keyboard Navigation
