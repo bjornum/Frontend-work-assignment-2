@@ -166,7 +166,7 @@ li:hover {
 /* Navigation - Centers links with even spacing */
 .nav {
   display: flex;
-  gap: 25px;
+  gap: 15px;
 }
 
 /* Navigation Link styling */
@@ -178,7 +178,6 @@ li:hover {
   transition: color 0.3s ease-in-out;
   font-size: 18px;
   position: relative;
-  margin-right: 15px;
 }
 
 /* Smooth underline effect */
