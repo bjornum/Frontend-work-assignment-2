@@ -11,7 +11,7 @@
     <header class="navbar headerContainer">
       <h1 class="headerTitle">Inaccessible Website</h1>
       <section class="navContainer">
-        <nav class="nav" aria-label="Main navigation" role="navigation">
+        <nav class="nav" aria-label="Main navigation">
           <a href="#home">Home</a>
           <a href="#about">About</a>
           <a href="#contact">Contact</a>
@@ -95,32 +95,32 @@
     </main>
 
     <!-- Gives a nice background, when Modal is opened -->
-    <div id="modalBackground" class="modalBackground" onclick="closeSubscriptionModal()"></div>
+    <section id="modalBackground" class="modalBackground" onclick="closeSubscriptionModal()"></section>
 
     <!-- Subscription Modal -->
-    <dialog id="subscriptionModal" class="subscriptionDialog">
-      <div class="subscriptionContentDialog">
+    <dialog id="subscriptionModal" class="subscriptionDialog" aria-hidden="true" aria-label="Subscription Modal">
+      <section class="subscriptionContentDialog">
         <button onclick="closeSubscriptionModal()" class="subscriptionCloseButton">&times;</button>
-        <h2 class="subscriptionHeader">Subscribe to our Newsletter</h2>
+        <h2 id="subscriptionHeader" class="subscriptionHeader">Subscribe to our Newsletter</h2>
         <p class="general-text subscriptionText">Get the latest updates about Saturn and other planets.</p>
         <form class="subscriptionForm" onsubmit="subscriptionConfirmation();">
           <input type="email" placeholder="Enter your email" id="subscriptionId" required class="subscriptionInput" />
           <button type="submit" class="subscriptionButton">Subscribe</button>
         </form>
-      </div>
+      </section>
     </dialog>
 
     <!-- Image Modal -->
     <dialog id="imageModal" class="modal modal-status modalContainer modalBackgroundBlack" onclick="closeImageModal()">
-      <div class="modal-content">
+      <section class="modal-content">
         <img id="modalImage" src="" alt="Expanded View" class="pointer" />
-      </div>
+      </section>
     </dialog>
 
     <!-- Footer -->
-    <div class="footer" id="contact">
+    <footer class="footer" id="footer">
       <p>© 2024 My Website</p>
-    </div>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>

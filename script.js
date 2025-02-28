@@ -89,13 +89,6 @@ const moonFacts = (moon) => {
   }
 };
 
-// Mouse over to click one of the onclick moons with enter button
-// document.querySelectorAll(".moon").forEach((moon) => {
-//   moon.addEventListener("mouseover", (event) => {
-//     event.target.click();
-//   });
-// });
-
 // Opens the image modal through tabbing to it, then hitting enter
 document.querySelectorAll(".moon").forEach((moon) => {
   moon.addEventListener("keydown", (event) => {
