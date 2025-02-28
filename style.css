@@ -246,9 +246,9 @@ li:hover {
 
 /* Image - Now Responsive with a set max width */
 .responsive-image {
-  width: 100%;
-  max-width: 600px;
+  max-width: 100%;
   height: auto;
+  display: block;
 }
 
 /* Removed Default outline on focus */
