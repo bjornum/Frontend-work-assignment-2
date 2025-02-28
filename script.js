@@ -88,3 +88,19 @@ const moonFacts = (moon) => {
     alert("No facts available for this moon");
   }
 };
+
+// Mouse over to click one of the onclick moons with enter button
+// document.querySelectorAll(".moon").forEach((moon) => {
+//   moon.addEventListener("mouseover", (event) => {
+//     event.target.click();
+//   });
+// });
+
+// Opens the image modal through tabbing to it, then hitting enter
+document.querySelectorAll(".moon").forEach((moon) => {
+  moon.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+      moonFacts(event.target.textContent);
+    }
+  });
+});
