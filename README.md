@@ -1,4 +1,4 @@
-# Work Requirement 2 - The Impossible page
+# Work Requirement 2 - Inaccessible Website
 
 This is a page about Saturn and some amazing facts about it.
 It is fully interactable, with focus on accessability.
